@@ -2,24 +2,24 @@
 import Head from 'next/head';
 // layout
 import { DefaultLayout } from '../layout';
+// components
+import { Hero } from '../components';
 
 const Home = ({
   content: {
-    pageTitle
+    pageTitle,
+    heroContent,
   }
 }) => {
+
+
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
       </Head>
       <DefaultLayout>
-          <h1>
-              NextJS Starting Template
-          </h1>
-          <p>Hello, is this font fcool </p>
-
-          <img className='logo-placeholder' src="/favicon.svg" alt='site-logo' />
+        <Hero id='hero-main' content={heroContent} />
       </DefaultLayout>
     </>
   );
@@ -28,6 +28,9 @@ const Home = ({
 /* STATIC CONTENT */
 const homeContent = {
   pageTitle: 'pofo',
+  heroContent: {
+    text: 'crafting the "Just Right" website for you is our specialty'
+  }
 };
 
 export function getStaticProps() {

@@ -2,15 +2,15 @@
 # Font Family
 --------------------------------------------------------------*/
 @font-face {
-    font-family: "HindVadodara";
-    src: url( '/static/fonts/hindVadodara/HindVadodara-Regular.ttf' );
+    font-family: "Oxygen";
+    src: url( '/static/fonts/oxygen/Oxygen-Regular.ttf' );
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Bold-HindVadodara";
-    src: url( '/static/fonts/hindVadodara/HindVadodara-SemiBold.ttf' );
+    font-family: "Oxygen-Bold";
+    src: url( '/static/fonts/oxygen/Oxygen-Bold.ttf' );
     font-style: normal;
     font-display: swap;
 }
@@ -60,7 +60,7 @@ $font-sizing-map: (
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Bold-HindVadodara;
+    font-family: Oxygen-Bold;
 }
 
 /*--------------------------------------------------------------
