@@ -14,6 +14,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head >
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preload" href="/static/fonts/hindVadodara/HindVadodara-Regular.ttf" as="font" crossOrigin="" /> 
+          <link rel="preload" href="/static/fonts/hindVadodara/HindVadodara-SemiBold.ttf" as="font" crossOrigin="" /> 
         </Head>
         <body>
           <Main />

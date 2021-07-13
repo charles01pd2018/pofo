@@ -2,25 +2,40 @@
 import Head from 'next/head';
 
 // layout
-import DefaultLayout from '../layout/defaultLayout';
+import { DefaultLayout } from '../layout';
 
 const Home = ({
+  content: {
+    pageTitle
+  }
 }) => {
   return (
-    <DefaultLayout>
-      <div className="container">
-        <Head>
-            <title>React Components Template</title>
-        </Head>
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+      </Head>
+      <DefaultLayout>
+          <h1>
+              NextJS Starting Template
+          </h1>
 
-        <h1>
-            NextJS Starting Template
-        </h1>
-
-        <img className='logo-placeholder' src="/favicon.svg" alt='site-logo' />
-      </div>
-    </DefaultLayout>
+          <img className='logo-placeholder' src="/favicon.svg" alt='site-logo' />
+      </DefaultLayout>
+    </>
   );
+}
+
+/* STATIC CONTENT */
+const homeContent = {
+  pageTitle: 'pofo',
+};
+
+export function getStaticProps() {
+  return {
+    props: {
+      content: homeContent,
+    }
+  }
 }
 
 export default Home;
